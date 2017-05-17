@@ -1,0 +1,1462 @@
+@import "bourbon/bourbon"
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video 
+	margin: 0
+	padding: 0
+	border: 0
+	font-size: 100%
+	font: inherit
+	vertical-align: baseline
+	list-style: none
+
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section 
+	display: block
+
+body 
+	line-height: 1
+
+ol, ul 
+	list-style: none
+
+blockquote, q 
+	quotes: none
+
+blockquote:before, blockquote:after,
+q:before, q:after 
+	content: ''
+	content: none
+
+table 
+	border-collapse: collapse
+	border-spacing: 0
+
+
+body
+	font-weight: normal
+	min-width: 320px
+	position: relative
+	-webkit-font-smoothing: antialised
+
+*::-webkit-input-placeholder
+	color: #fff
+	opacity: 1
+
+*:-moz-placeholder
+	color: #fff
+	opacity: 1
+
+*::-moz-placeholder
+	color: #fff
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #fff
+	opacity: 1
+
+a 
+	color: #fff
+	text-decoration: none
+	
+span 
+	font-family: "RobotoCondensed-Regular", sans-serif 
+p
+	font-family: "RobotoCondensed-Light", sans-serif 
+	color: #707070
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: red
+body input:required:valid,
+body textarea:required:valid
+	color: green
+
+.hidden
+	display: none
+
+
+.loader 
+	background: none repeat scroll 0 0 #fff
+	bottom: 0
+	height: 100%
+	left: 0
+	position: fixed
+	right: 0
+	top: 0
+	width: 100%
+	z-index: 9999
+	.loader_inner 
+		background-image: url("../img/loading.gif")
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center center
+		background-color: #fff
+		height: 60px
+		width: 60px
+		margin-top: -30px
+		margin-left: -30px
+		left: 50%
+		top: 50%
+		position: absolute
+
+
+header
+	position: relative
+	background-color: #000
+	overflow: hidden
+	width: 100%	
+
+
+
+.logo
+	float: left
+	margin-top: 28px
+	margin-left: 50px
+	max-width: 325px
+	img
+		width: 100%
+
+.users-section
+	float: right
+	margin-top: 11px
+	margin-right: 48px
+	p
+		color: #fff
+		font-family: "OpenSans", sans-serif
+		font-size: 15px
+
+
+.icon
+	position: relative
+	width: 31px
+	height: 31px
+	border-radius: 50%
+	border: 1px solid #f68235
+	float: left
+	.fa,
+	svg
+		position: absolute
+		top: 50%
+		left: 50%
+		-webkit-transform: translate(-50%, -50%)
+		-ms-transform: translate(-50%, -50%)
+		transform: translate(-50%, -50%)
+
+.users-section__phone
+	float: left
+	margin-right: 41px
+	.phone__icon
+		margin-right: 9px
+	.fa-phone
+		color: #f68235
+
+	.users-section__phone___text
+		float: left
+		position: relative
+		margin-top: 6px
+		span
+			margin-left: 3px
+			.fa-angle-down
+				color: #f68235
+				font-size: 17px
+				transition: transform .3s
+
+		p.schadule
+			font-size: 12px
+			margin-top: 6px		
+
+.phone_hidden
+	position: absolute
+	width: 100%
+	border-top: 5px solid transparent
+	opacity: 0
+	top: -9999em
+	transition: .5s opacity
+	z-index: 200
+	color: #fff
+	background-color: #000
+	font-family: "OpenSans", sans-serif
+	font-size: 15px
+
+.users-section__phone___text:hover .phone_hidden
+	opacity: 1
+	top: 18px
+
+.users-section__phone___text:hover .fa-angle-down
+	transform: scaleY(-1)
+
+	
+
+.users-section__enter
+	float: left
+	margin-right: 25px
+	.enter__icon
+		margin-right: 5px
+	.users-section__enter__text
+		float: left
+		margin-top: 7px
+		a:hover
+			color: #f68235
+
+.users-section__cart
+	float: left
+	.cart__icon
+		float: left
+		margin-right: 6px
+		svg
+			width: 14px
+			height: 14px
+		.purchases-count
+			position: absolute
+			top: -8px
+			right: -5px
+			border-radius: 50%
+			background-color: #FFF
+			font-family: "OpenSans-Bold", sans-serif
+			font-size: 11px
+			width: 16px
+			height: 16px
+			text-align: center
+			line-height: 16px
+
+	.users-section__cart__text
+		float: left
+		margin-top: 5px
+		a:hover
+			color: #f68235
+
+.discounts-catalog
+	position: absolute
+	top: 77px
+	left: 35.2%
+	font-family: "HelveticaNeueCyr-Light", sans-serif
+	font-size: 14px
+	z-index: 100
+	width: 276px
+
+
+
+.left-button
+	position: relative
+	height: 31px
+	width: 114px
+	background-color: #e5e5e5
+	float: left
+	text-transform: uppercase
+	line-height: 31px
+	color: #000
+	margin-top: 8px
+	z-index: 1
+	.left-button__icon
+		float: left
+		margin: 4px 13px 0 17px
+		svg
+			width: 22px
+			height: 21px
+
+.left-button:before
+	position: absolute
+	background-color: #e5e5e5
+	content: ''
+	top: 0
+	right: -20px
+	bottom: 0
+	width: 32px
+	transform: skew(-33deg)
+
+.right-button
+	position: relative
+	height: 39px
+	width: 120px
+	background-color: #f68235
+	float: left
+	text-transform: uppercase
+	text-align: center
+	color: #fff
+	line-height: 39px	
+	margin-left: 41px
+	z-index: 1
+.right-button:after
+	position: absolute
+	content: ''
+	background-color: #f68235
+	top: 0px
+	left: -20px
+	bottom: 0
+	width: 34px
+	transform: skew(-33deg)
+
+.search
+	float: right
+	margin-top: -8px
+	margin-right: 49px
+	margin-bottom: 12px
+	width: 221px
+	form
+		border: 1px solid #606060
+	input
+		border: none
+		border-style: none
+		background-color: transparent
+		color: #fff
+		font-size: 12px
+		font-family: "OpenSans", sans-serif
+		height: 25px
+		line-height: 25px
+		padding-left: 11px
+	button
+		background-color: transparent
+		border: none
+		border-style: none
+		float: right
+		margin-top: 6px
+		.fa-search
+			color: #f68235
+			font-size: 14px
+
+
+nav
+	width: 100%
+	border-top: 1px solid #606060
+	ul
+		padding: 0 100px 0 50px
+		list-style: none
+		display: -webkit-inline-flex
+		display: -moz-inline-flex
+		display: -ms-inline-flex
+		display: -o-inline-flex
+		display: inline-flex
+		-webkit-justify-content: space-between
+		justify-content: space-between
+		width: 100%
+		li 
+			a 
+				text-transform: uppercase
+				color: #fff
+				line-height: 46px
+				font-family: "OpenSans-Light", sans-serif
+				font-size: 14px
+				&:hover
+					color: #f68235
+				&.active
+					color: #f68235
+
+// hidden-mnu for 320-767px
+
+
+.toggle_mnu
+	width: 50px
+	height: 50px
+	border: none
+	float: left
+	z-index: 200
+	left: 6px
+	top: 13px
+	background-color: transparent
+	position: fixed
+	cursor: pointer
+	span
+		display: block
+
+	$w: 23px
+	$h: 3px
+
+	.sandwich 
+		width: $w
+		height: $w
+		position: absolute
+		top: 9px
+		bottom: 0
+		left: 0
+		right: 0
+		margin: auto
+		z-index: 200
+
+	.sw-topper
+		position: relative
+		top: 0
+		width: $w 
+		height: $h
+		background: #f68235
+		border: none
+		transition: transform 0.5s, top 0.2s
+		display: block
+
+	.sw-bottom
+		position: relative
+		width: $w
+		height: $h
+		top: 5px
+		background: #f68235
+		border: none
+		transition: transform 0.5s, top 0.2s
+		transition-delay: 0.2s, 0s
+	.sw-footer
+		position: relative
+		width: $w
+		height: $h
+		top: 10px
+		background: #f68235
+		border: none
+		transition: all 0.5s
+		transition-delay: 0.1s
+	.sandwich.active
+		.sw-topper
+			top: 8px
+			transform: rotate(-45deg)
+		.sw-bottom
+			top: 5px
+			transform: rotate(45deg)
+		.sw-footer
+			opacity: 0
+			top: 0
+			transform: rotate(180deg)
+
+
+.hidden-mnu
+	position: fixed
+	display: none
+	top: 126px
+	left: 0px
+	z-index: 200
+	background-color: #e5e5e5
+
+
+	ul
+		float: none
+		text-align: center
+		li
+			display: block
+			margin-left: 0
+
+			a 
+				text-transform: none
+				line-height: 2em
+				font-size: 14px
+				font-family: "OpenSans-Light", sans-serif 
+				color: #000
+				padding: 0 35px
+				text-transform: uppercase
+
+			&.active
+				text-decoration: underline
+
+			&:hover
+				border-bottom: none
+	> ul
+		padding: 0
+
+		> li
+
+				
+			&:hover
+				color: #fff
+				background-color: #f68235
+				transition: all 1s ease
+				text-decoration: none
+				a 
+					color: #fff
+
+	// hidden-mnu-end
+	
+
+
+	// header-end
+
+// main
+
+.main 
+	max-width: 1020px
+	margin: 0 auto
+
+// breadcrumbs section
+
+.breadcrumbs
+	font-family: "HelveticaNeueCyr-Light", sans-serif
+	font-size: 12px
+	float: left
+	margin-top: 29px
+
+	span
+		color: #f68235
+		font-family: "HelveticaNeueCyr-Light", sans-serif
+		font-size: 12px
+	a 
+		color: #000	
+
+.timer
+	height: 47px
+	width: 175px
+	float: right
+	background-color: #e6e6e6
+	margin-top: 15px
+	.timer__icon
+		float: left
+		margin: 10px 11px 0 9px
+
+		svg
+			width: 28px
+			height: 29px
+	.timer__text
+		float: left
+		margin-top: 11px
+		p 
+			font-family: "HelveticaNeueCyr-Thin", sans-serif
+			font-size: 12px
+			color: #000
+			span 
+				font-family: "HelveticaNeueCyr-Roman", sans-serif
+				color: #f68235	
+				font-size: 14px
+
+// breadcrumbs section end
+
+
+// sliders
+
+// vertival-slider
+.sliders
+	float: left
+	position: relative
+	.timer__icon
+		position: absolute
+		top: 18px
+		left: 131px
+		z-index: 10
+		svg
+			width: 29px
+			height: 28.5px
+.sl1
+	position: relative
+	margin-top: 39px
+	float: left
+	width: 72px
+.sl__slide
+	margin-top: 16px
+	outline: none
+	cursor: pointer
+	width: 72px
+	img
+		width: 70px
+		height: 98px
+		padding: 2px
+		background-color: #fff
+		-webkit-transition: background-color .3s
+		-o-transition: background-color .3s
+		transition: background-color .3s
+		&:hover
+			background-color: #f68235
+		&.active
+			background-color: #f68235
+	
+
+.ti-arrow-down,
+.ti-arrow-up
+	position: absolute
+	color: #cecece
+	font-size: 24px
+	cursor: pointer
+	&:hover
+		color: #f68235
+
+.ti-arrow-up
+	top: -23px
+	left: 24px
+.ti-arrow-down
+	left: 24px
+	bottom: -38px
+
+// big-slider
+.sl2
+	float: left
+	max-width: 425px
+	margin-left: 60px
+
+.sl2__slide
+	margin-top: 16px
+	outline: none
+	cursor: pointer
+	max-width: 425px
+	img
+		width: 100%
+
+.sl3
+	
+	display: block
+	width: 370px
+	margin-left: 40px
+	
+	.sl__slide
+		outline: none
+		width: 64px
+		margin-top: 0px
+	
+	img
+		width: 62px
+		height: 84px
+	
+	.ti-arrow-left,
+	.ti-arrow-right
+		position: relative
+		color: #cecece
+		font-size: 24px
+		cursor: pointer
+		z-index: 10
+
+	.ti-arrow-left,
+	.ti-arrow-right:hover
+		color: #f68235
+
+	
+	.ti-arrow-left
+		top: -57px
+		left: -24px
+
+	.ti-arrow-right
+		top: 51px
+		right: -344px
+
+/* Dots */
+
+.slick-dots
+	position: absolute
+	bottom: -28px
+	display: block
+	width: 100%
+	padding: 0
+	margin: 0
+	list-style: none
+	text-align: center
+	z-index: 100
+
+.slick-dots li
+	position: relative
+	display: inline-block
+	width: 8px
+	height: 8px
+	margin: 0 5px
+	padding: 0
+	cursor: pointer
+
+.slick-dots li button
+	font-size: 0
+	line-height: 0
+	display: block
+	width: 8px
+	height: 8px
+	padding: 6px
+	cursor: pointer
+	color: transparent
+	border: 0
+	outline: none
+	background: transparent
+
+.slick-dots li button:hover,
+.slick-dots li button:focus
+	outline: none
+
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before
+	opacity: 1
+
+.slick-dots li button:before
+	font-family: 'slick'
+	font-size: 6px
+	line-height: 20px
+	background-color: #dedede
+	border-radius: 50%
+	position: absolute
+	top: 0
+	left: 0
+	width: 8px
+	height: 8px
+	content: ''
+	text-align: center	
+	color: black
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+
+.slick-dots li.slick-active button:before
+	opacity: 1
+	background-color: #f68235
+
+/* Dots-end */
+// sliders-end
+
+
+
+// description
+
+.description
+	float: right
+	width: 404px
+.description__goods-name
+	width: 100%
+	border-bottom: 1px solid #dedede
+	overflow: hidden
+	.text_wrap
+		float: left
+		.goods-name__text
+			font-family: "HelveticaNeueCyr-Light", sans-serif
+			h2 
+				font-size: 25px
+				color: #f68235
+				margin-top: 13px
+			h3
+				font-size: 18px
+				font-family: "HelveticaNeueCyr-Thin",sans-serif
+				color: #000
+		.goods-name__text__proce		
+			.price_right 
+				font-family: "HelveticaNeueCyr-Roman",sans-serif
+				font-size: 25px
+				color: #f68235
+				margin-top: 10px
+				margin-left: 10px
+				float: left
+			.proce_left 
+				float: left
+				font-family: "HelveticaNeueCyr-Light", sans-serif
+				font-size: 25px
+				margin-top: 10px
+				color: #999
+				text-decoration: line-through
+
+	.goods-name__discount
+		float: right
+		height: 46px
+		width: 46px
+		border-radius: 50%
+		background-color: #828282
+		text-align: center
+		line-height: 46px
+		font-size: 17px
+		font-family: "HelveticaNeueCyr-Thin",sans-serif
+		color: #fff
+		margin-top: 58px
+		margin-bottom: 14px
+
+.description__colours
+	width: 100%
+	border-bottom: 1px solid #dedede
+	overflow: hidden
+	p 
+		color: #1b1b1b
+		font-family: "HelveticaNeueCyr-Thin",sans-serif
+		font-size: 14px
+		margin-top: 12px
+		margin-bottom: 14px
+		span
+			font-family: "HelveticaNeueCyr-Roman",sans-serif
+
+.colours-wrap
+	margin-bottom: 12px
+	.colour
+		height: 35px
+		width: 35px
+		display: inline-block
+		margin-right: 6px
+		&.active
+			border: 2px solid #f68235
+	.gray-colour
+		background-color: #636363
+	.blue-colour 
+		background-color: #0a0c44
+	.orange-colour
+		background-color: #ffc66d
+	.red-colour
+		background-color: #b30016
+	.green-colour
+		background-color: #abc850
+
+.description__size 
+	width: 100%
+	border-bottom: 1px solid #dedede
+	overflow: hidden
+	.size__text
+		float: left
+		color: #1b1b1b
+		font-family: "HelveticaNeueCyr-Roman",sans-serif
+		font-size: 14px
+		margin-top: 12px
+	.size__link
+		float: right
+		margin-top: 10px
+		a 
+			color: #999
+			font-family: "HelveticaNeueCyr-Roman",sans-serif
+			font-size: 14px
+			text-decoration: underline
+			&:hover
+				color: #f68235
+
+.size__variants
+	margin-top: 11px
+	.variant
+		height: 35px
+		width: 35px
+		display: inline-block
+		margin-right: 6px
+		border: 1px solid #cccccc
+		font-family: "HelveticaNeueCyr-Roman",sans-serif
+		font-size: 12px
+		text-align: center
+		text-transform: uppercase
+		line-height: 35px
+		&.active
+			border: 2px solid #f68235
+
+	.size__present
+		background-color: #fff
+		color: #1b1b1b
+	.size__absent
+		background-color: #dedede
+		color: #6d6d6d
+
+.size__fitting
+	margin: 14px 0
+	overflow: hidden
+	.size__fitting__link
+		float: left
+		a 
+			color: #999
+			font-family: "HelveticaNeueCyr-Roman",sans-serif
+			font-size: 14px
+			text-decoration: underline
+			&:hover
+				color: #f68235
+
+	.hanger-icon
+		height: 21px
+		width: 21px
+		background-color: #487eba
+		border-radius: 50%
+		float: left
+		position: relative
+		margin-left: 10px
+		svg
+			position: absolute
+			height: 15px
+			width: 18px
+			top: 50%
+			left: 50%
+			-webkit-transform: translate(-50%, -50%)
+			-ms-transform: translate(-50%, -50%)
+			transform: translate(-50%, -50%)
+
+.description__counter
+	width: 100%
+	border-bottom: 1px solid #dedede
+	overflow: hidden
+	.counter__tex
+		font-family: "HelveticaNeueCyr-Roman", sans-serif
+		font-size: 14px
+		color: #1b1b1b
+		margin-top: 12px
+
+.counter__count
+	float: left
+	margin-top: 12px
+	.simbol
+		height: 35px
+		line-height: 35px
+		text-align: center
+		font-family: "HelveticaNeueCyr-Roman",sans-serif
+		font-size: 14px
+		font-weight: bold
+		cursor: pointer
+	.minus
+		float: left
+		margin-right: 10px
+	input
+		float: left
+		height: 35px
+		width: 76px
+		text-align: center
+		line-height: 35px
+		font-family: "HelveticaNeueCyr-Roman",sans-serif
+		font-size: 14px
+		font-weight: bold
+	.plus
+		float: left	
+		margin-left: 6px
+
+.counter__message
+	position: relative
+	float: right
+	background-color: #eaeaea	
+	width: 168px
+	height: 40px
+	text-align: center
+	margin-top: 8px
+	margin-right: 23px
+	p 
+		color: #1b1b1b
+		font-family: "HelveticaNeueCyr-Light",sans-serif
+		font-size: 12px
+		color: #1b1b1b
+	p.first-p
+		margin-top: 7px
+
+.counter__message:before
+	position: absolute
+	content: ''
+	bottom: -7px
+	left: 50%
+	transform: translate(-50%, 0)
+	border-top: 11px solid #eaeaea
+	border-right: 7px solid transparent
+	border-left: 7px solid transparent
+
+.counter__buttons
+	margin-top: 12px
+	overflow: hidden
+	margin-bottom: 26px
+	
+.button_favorite
+	float: left
+	width: 165px
+	border: 1px solid #dedede	
+	color: #1b1b1b
+	height: 35px
+	.button_favorite__text
+		float: left
+		line-height: 35px
+		font-family: "HelveticaNeueCyr-Thin",sans-serif
+		font-size: 12px
+		text-align: center
+		text-transform: uppercase
+	.button_favorite__icon 
+		float: left
+		margin: 8px 11px 0 28px
+		.fa-heart
+			
+			font-size: 15px
+	&:hover
+		border: 1px solid #f68235	
+		color: #f68235
+		.fa-heart
+			color: #f68235
+
+.button_cart
+	float: right
+	width: 216px
+	background-color: #f68235
+	color: #fff
+	
+	.button_cart__icon 
+		float: left
+		margin-top: 7px
+		margin-left: 24px
+		svg
+			width: 15px
+			height: 22px
+			path 
+				fill: #fff
+
+	.button_cart__text
+		float: left
+		height: 35px
+		line-height: 35px
+		font-family: "HelveticaNeueCyr-Thin",sans-serif
+		font-size: 13.03px
+		text-transform: uppercase
+		margin-left: 13px
+
+
+.description__booking
+	width: 100%
+	border-bottom: 1px solid #dedede
+	overflow: hidden
+	margin-top: 14px
+
+	.booking__order
+		.booking__order__icon
+			float: left
+			.fa-phone
+				color: #7c7c7c
+				font-size: 26px
+		.booking__order__text
+			float: left
+			color: #1b1b1b
+			font-family: "HelveticaNeueCyr-Roman",sans-serif
+			font-size: 14px
+			margin-top: 2px
+			margin-left: 11px
+
+.booking__phone
+	margin-left: 33px
+	margin-top: 2px
+	p 
+		color: #999
+		font-family: "HelveticaNeueCyr-Roman",sans-serif
+		font-size: 14px
+		white-space: pre
+		span
+			text-decoration: underline
+			color: #999
+			font-family: "HelveticaNeueCyr-Roman",sans-serif
+			font-size: 14px
+
+.booking__availability
+	overflow: hidden
+	margin-top: 13px
+	margin-bottom: 14px
+	.booking__availability__icon
+		float: left
+		margin-left: -4px
+		.ti-location-pin
+			color: #dcdcdc
+			font-size: 30px
+	.booking__availability__text
+		float: left
+		margin-top: 7px
+		margin-left: 6px
+		a 
+			text-decoration: underline
+			font-family: "HelveticaNeueCyr-Roman",sans-serif
+			font-size: 14px
+			color: #1b1b1b
+			&:hover 
+				color: #f68235
+
+// popup-window
+
+.white-popup 
+	position: relative
+	background: #FFF
+	width: auto
+	max-width: 635px
+	margin: 20px auto
+
+.mfp-close
+	position: absolute
+	top: 0
+	right: 0
+	width: 35px
+	height: 35px
+	line-height: 35px
+	font-family: "HelveticaNeueCyr-Thin",sans-serif
+	font-size: 20px
+	font-weight: normal
+
+.popup__header
+	background-color: #dbdbdb	
+	h2
+		font-family: "HelveticaNeueCyr-Thin",sans-serif
+		font-size: 18px
+		margin-left: 35px
+		padding: 8px 0
+		text-transform: uppercase
+
+.popup-content__wrap
+	padding: 40px
+
+.popup-content__product_name
+	text-align: center
+
+	border-bottom: 1px solid #dedede
+	padding-bottom: 40px
+	p
+		font-family: "HelveticaNeueCyr-Thin",sans-serif
+		font-size: 14px
+		color: #1b1b1b
+		span
+			font-family: "HelveticaNeueCyr-Roman",sans-serif
+			font-size: 14px
+			color: #1b1b1b
+
+.popup-content__places
+	border-bottom: 1px solid #dedede
+	margin-top: 60px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-between
+	-webkit-justify-content: space-between
+	-webkit-flex-wrap: wrap
+	flex-wrap: wrap
+	margin-bottom: 20px
+
+.place__item
+	margin: 0 auto
+	text-align: center
+	color: #000
+	margin-bottom: 10px
+	.place__item__text
+		min-height: 78px
+		h3 
+			font-family: "HelveticaNeueCyr-Light", sans-serif
+			font-size: 14px
+			text-transform: uppercase
+			margin-bottom: 10px
+			span 
+				font-family: "HelveticaNeueCyr-Light", sans-serif
+				font-size: 12px
+				text-transform: none
+		p 
+			font-family: "HelveticaNeueCyr-Light", sans-serif
+			font-size: 12px
+			color: #000
+			margin-bottom: 2px
+	p.map 
+		margin-top: 18px
+		a
+			color: #000
+			text-decoration: underline
+			font-family: "HelveticaNeueCyr-Light", sans-serif
+			font-size: 12px
+			&:hover
+				color: #f68235
+
+// accordion
+
+.accordion
+	width: 100%
+	margin-top: 13px
+
+	.accordion_item
+		margin-bottom: 10px
+		padding-bottom: 17px
+		position: relative
+		border-bottom: 1px solid #dedede
+	.title_block
+		color: #000
+		cursor: pointer
+		font-family: "HelveticaNeueCyr-Light", sans-serif
+		font-size: 25px
+		background: transparent
+		padding: 10px 55px 8px 0px
+		-webkit-transition: all .2s linear 0
+		-webkit-transition-delay: .2s 0
+		transition: all 0.2s linear 0
+		&:before
+			content: ''
+			height: 16px
+			width: 2px
+			display: block
+			background-color: #000
+			position: absolute
+			right: 7px
+			top: 18px
+			transition: .3s
+		&:after
+			content: ''
+			height: 2px
+			width: 16px
+			display: block
+			background-color: #000
+			position: absolute
+			right: 0px
+			top: 25px
+
+	.active_block .title_block:before
+		-ms-transform: rotate(-90deg)
+		-webkit-transform: rotate(-90deg)
+		transform: rotate(-90deg)
+		top: 18px
+
+	.active_block .title_block
+		color: #000
+		
+	.info
+		display: none
+		padding: 10px 15px 10px 0
+		overflow: hidden
+		
+	p.info_item
+		color: #1b1b1b
+		font-family: "HelveticaNeueCyr-Light", sans-serif
+		font-weight: normal
+		font-size: 14px
+		line-height: 16px
+		span
+			font-family: "HelveticaNeueCyr-Bold", sans-serif
+	p.last
+		margin-top: 20px
+		margin-bottom: 26px
+		a 
+			color: #1b1b1b
+			text-decoration: underline
+	p.measuring
+		margin-bottom: 26px
+	p.delivery
+		margin-bottom: 20px
+	p 
+		font-family: "HelveticaNeueCyr-Thin",sans-serif
+		font-size: 14px
+		color: #1b1b1b
+
+// acordion-end
+
+.description__social
+	margin-top: 24px
+	overflow: hidden
+	.social__wrap
+		float: right
+		margin-bottom: 24px
+		overflow: hidden
+		.social__text
+			float: left
+			font-family: "HelveticaNeueCyr-Roman",sans-serif
+			font-size: 14px
+			color: #1b1b1b
+
+.social__icon__wrap
+	float: right
+	.social__icon
+		float: left
+		margin-left: 30px
+		.ti-facebook,
+		.fa-vk,
+		.ti-google,
+		.ti-twitter-alt
+			color: #3a3a3a
+			&:hover
+				color: #f68235
+		
+
+		// description-end
+
+
+		// products_similar
+
+.products_similar
+	border-top: 1px solid #dedede
+	border-bottom: 1px solid #dedede
+	overflow: hidden
+	h3
+		text-align: center
+		font-size: 21.34px
+		font-family: "HelveticaNeueCyr-Light", sans-serif
+		margin-top: 24px
+
+.products_similar__wrap
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-between
+	-webkit-justify-content: space-between
+	-webkit-flex-wrap: wrap
+	flex-wrap: wrap
+.products_similar__item
+	width: 208px
+	margin: 59px 0 20px
+	img 
+		width: 100%
+
+.similar__text
+	margin-top: 10px
+	p
+		font-family: "HelveticaNeueCyr-Thin",sans-serif
+		font-size: 14px
+		color: #1b1b1b
+	p.model
+		font-family: "HelveticaNeueCyr-Roman",sans-serif
+		font-size: 14px
+	p.similar__price
+		margin-top: 10px
+		font-size: 15px
+		color: #f68235
+		font-family: "HelveticaNeueCyr-Roman",sans-serif
+		span
+			color: #a3a3a3	
+			font-family: "HelveticaNeueCyr-Light", sans-serif
+			text-decoration: line-through				
+		
+	// products_similar-end
+
+	// additional-links
+.links_additional
+	border-bottom: 1px solid #dedede
+	overflow: hidden
+	ul
+		list-style: none
+		padding: 0
+		margin: 49px auto	
+		max-width: 550px
+		text-align: center
+		li 
+			display: inline-block
+			margin: 0 7px
+			span
+				font-family: "HelveticaNeueCyr-Roman",sans-serif
+				font-size: 14px
+				color: #1b1b1b
+			a
+				font-family: "HelveticaNeueCyr-Thin",sans-serif
+				font-size: 14px
+				color: #a3a3a3	
+				text-decoration: underline
+				&:hover
+					color: #f68235
+
+// additional-links-end
+
+// capabilities
+
+.capabilities
+	margin: 25px 0
+	overflow: hidden
+.capabilities__item
+	max-width: 340px
+	float: left
+	text-align: center
+	h4 
+		font-family: "HelveticaNeueCyr-Light", sans-serif
+		font-size: 17px
+		color: #1b1b1b
+		margin-bottom: 25px
+
+.item_central
+	border-left: 1px solid #dedede
+	border-right: 1px solid #dedede
+.capabilities__item__text
+	padding: 0 45px
+	p
+		font-family: "HelveticaNeueCyr-Thin",sans-serif
+		font-size: 14px
+		color: #1b1b1b
+
+// capabilities-end
+
+// main-end
+
+footer
+	background-color: #000
+	overflow: hidden
+	.footer__menu
+		width: 54%
+		margin: 27px 0 26px 50px
+		float: left
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		-webkit-justify-content: space-between
+		-webkit-flex-wrap: wrap
+		flex-wrap: wrap
+		h5 
+			font-family: "OpenSans-Bold", sans-serif
+			font-size: 13px	
+			color: #fff	
+			text-transform: uppercase
+			margin-bottom: 15px
+	ul 
+		li:last-child
+			margin-bottom: 0px
+		li 
+			margin-bottom: 15px
+			a 
+				font-size: 13px	
+				font-family: "OpenSans",sans-serif
+				&:hover
+					color: #f68235
+
+	.catalog
+		a 
+			text-transform: uppercase 
+
+.footer__social
+	float: right
+	margin-top: 31px
+	margin-right: 50px
+	overflow: hidden
+
+.logo_footer
+	width: 238px
+	img 
+		width: 100%
+.footer__social__copy
+	margin-top: 18px
+	p
+		text-align: right
+		font-family: "OpenSans",sans-serif
+		font-size: 13px
+		color: #606060
+		margin-bottom: 9px
+
+.footer__social__icons
+	float: right
+	margin-top: 12px
+	.footer_icon
+		width: 32px
+		height: 32px
+		border: 1px solid #606060
+		text-align: center
+		line-height: 32px
+		display: inline-block
+		margin-left: 10px
+		.fa,
+		.ti-pinterest 
+			color: #606060	
+		&:hover
+			border: 1px solid #f68235
+			.fa,
+			.ti-pinterest 
+				color: #f68235
+
+.footer__social__cards
+	width: 100%
+	display: block
+	overflow: hidden
+	.cards
+		height: 24px
+		width: 37px
+		float: left
+		margin-left: 10px
+		svg
+			height: 44px
+			width: 37px
+			&:hover
+				path
+					fill: #f68235
+				
+.cards__liqpay
+	background-color: #606060
+	font-size: 10px
+	font-family: "OpenSans", sans-serif
+	text-align: center
+	line-height: 24px
+	color: #000
+	margin-top: 10px
+	&:hover
+		background-color: #f68235
+
+
+// up-button
+
+.up	
+	position: fixed
+	bottom: 245px
+	right: 50px
+	width: 59px
+	height: 59px
+	text-align: center
+	color: #000
+	line-height: 59px
+	border: 1px solid #cccccc
+	background-color: #dedede
+	font-size: 40px
+
+.up.mPS2id-highlight
+	display: none
